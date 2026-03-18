@@ -6,219 +6,134 @@
   <title>Products | Kirav Food Tech</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .float-group{position:fixed!important;right:18px!important;bottom:24px!important;z-index:99999!important;display:flex!important;flex-direction:column!important;gap:10px!important;align-items:center!important;}
+    .float-btn{width:54px!important;height:54px!important;border-radius:50%!important;color:#fff!important;font-size:1.4rem!important;display:flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;box-shadow:0 4px 20px rgba(0,0,0,.35)!important;}
+    .float-wa{background:#25D366!important;}
+    .float-call{background:#3A6B5C!important;}
+  </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">
-        <div class="logo-badge">
-          <img src="images/logo-dark.png" alt="Kirav">
-        </div>
-        <div class="logo-text">
-          KIRAV FOOD TECH
-          <small>Flavour Manufacturing</small>
-        </div>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html" class="active">Products</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- PAGE HERO -->
-  <header class="page-hero">
-    <div class="container">
-      <span class="section-tag" style="color:var(--sand); background: rgba(243,217,177,0.15); border: 1px solid rgba(243,217,177,0.25); margin: 0 auto 1rem; display: inline-flex;">
-        Our Portfolio
-      </span>
-      <h1>Our <em>Product</em> Range</h1>
-      <p>High-quality flavours and ingredients from the world's top flavour houses — curated for your brand.</p>
-    </div>
-  </header>
-
-  <!-- PRODUCTS SECTION -->
-  <section class="products-section">
-    <div class="container">
-
-      <!-- Flavour Brands -->
-      <div class="products-category">
-        <div class="category-header">
-          <h2 class="category-title">Flavour <span>Brands</span></h2>
-          <div class="category-line"></div>
-          <span class="section-tag">9 Brands</span>
-        </div>
-
-        <div class="products-mosaic">
-          <div class="product-tile fade-up fade-up-1">
-            <span class="product-tile-icon">🌶️</span>
-            <h3>Oror Flavour</h3>
-            <p>Sweet &amp; spicy sensation</p>
-            <span class="product-tag">Savory</span>
-          </div>
-          <div class="product-tile fade-up fade-up-2">
-            <span class="product-tile-icon">🌿</span>
-            <h3>Aarav Flavour</h3>
-            <p>Rich earthy tones</p>
-            <span class="product-tag">Natural</span>
-          </div>
-          <div class="product-tile fade-up fade-up-3">
-            <span class="product-tile-icon">✨</span>
-            <h3>Keva Flavour</h3>
-            <p>Classic aromatic essence</p>
-            <span class="product-tag">Classic</span>
-          </div>
-          <div class="product-tile fade-up fade-up-1">
-            <span class="product-tile-icon">🫐</span>
-            <h3>Confluence Valley</h3>
-            <p>Vibrant berry fusion</p>
-            <span class="product-tag">Fruit</span>
-          </div>
-          <div class="product-tile fade-up fade-up-2">
-            <span class="product-tile-icon">🧪</span>
-            <h3>Matrix Flavour</h3>
-            <p>Complex savory boost</p>
-            <span class="product-tag">Savory</span>
-          </div>
-          <div class="product-tile fade-up fade-up-3">
-            <span class="product-tile-icon">🍊</span>
-            <h3>Sensient Flavour</h3>
-            <p>Fruit-forward intensity</p>
-            <span class="product-tag">Fruit</span>
-          </div>
-          <div class="product-tile fade-up fade-up-1">
-            <span class="product-tile-icon">🥛</span>
-            <h3>IFF</h3>
-            <p>Dairy &amp; sweet profiles</p>
-            <span class="product-tag">Dairy</span>
-          </div>
-          <div class="product-tile fade-up fade-up-2">
-            <span class="product-tile-icon">🍬</span>
-            <h3>Bell Flavour</h3>
-            <p>Confection masters</p>
-            <span class="product-tag">Confection</span>
-          </div>
-          <div class="product-tile fade-up fade-up-3">
-            <span class="product-tile-icon">🥐</span>
-            <h3>Dolher Flavour</h3>
-            <p>Bakery &amp; pastry</p>
-            <span class="product-tag">Bakery</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Specialty Ingredients -->
-      <div class="products-category">
-        <div class="category-header">
-          <h2 class="category-title">Specialty <span>Ingredients</span></h2>
-          <div class="category-line"></div>
-          <span class="section-tag">3 Products</span>
-        </div>
-
-        <div class="specialty-grid">
-          <div class="specialty-card fade-up fade-up-1">
-            <span class="icon-big">🍦</span>
-            <h3>Vanilla Powder</h3>
-            <p>Pure, premium-grade vanilla powder — perfect for dairy, bakery, and beverage applications.</p>
-          </div>
-          <div class="specialty-card fade-up fade-up-2">
-            <span class="icon-big">🍮</span>
-            <h3>Caramel Liquid</h3>
-            <p>Rich, smooth caramel liquid concentrate — brings warmth and depth to any sweet formulation.</p>
-          </div>
-          <div class="specialty-card fade-up fade-up-3">
-            <span class="icon-big">🧂</span>
-            <h3>Seasoning Powder</h3>
-            <p>A versatile savory blend — elevates snacks, ready meals, and processed foods.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA Banner -->
-      <div style="background: linear-gradient(135deg, var(--forest), var(--dark)); border-radius: var(--radius-lg); padding: clamp(2rem, 5vw, 3.5rem); text-align: center; color: white; margin-top: 2rem; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: -60px; right: -60px; width: 240px; height: 240px; background: radial-gradient(circle, rgba(212,113,74,0.2) 0%, transparent 70%); border-radius: 50%;"></div>
-        <span class="section-tag" style="color: var(--sand); background: rgba(243,217,177,0.15); border: 1px solid rgba(243,217,177,0.25); margin: 0 auto 1rem; display: inline-flex;">Bulk & Custom Orders</span>
-        <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 0.8rem;">Need a Custom Flavour <em style="color: var(--sand);">Solution?</em></h2>
-        <p style="opacity: 0.8; max-width: 500px; margin: 0 auto 2rem;">We work closely with food &amp; beverage manufacturers for tailored flavour profiles, bulk pricing, and expert support.</p>
-        <a href="contact.html" class="btn-primary" style="margin: 0 auto;">Contact Our Team <i class="fas fa-arrow-right"></i></a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FLOATING BUTTONS -->
-  <div class="float-group">
-    <a href="tel:+919692839491" class="float-btn float-call" data-tip="Call Us"><i class="fas fa-phone-alt"></i></a>
-    <a href="https://wa.me/919692839491" target="_blank" class="float-btn float-wa" data-tip="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-badge"><img src="images/logo-dark.png" alt="Kirav"></div>
+      <div class="logo-text">KIRAV FOOD TECH<small>Flavour Manufacturing</small></div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+    </ul>
   </div>
+</nav>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="logo-badge" style="width: fit-content; margin-bottom: 1.2rem;">
-            <img src="images/logo-dark.png" alt="Kirav" style="height:30px;">
-          </div>
-          <p>Kirav Food Tech is a trusted food flavour manufacturing and distribution company. We deliver world-class taste solutions to the Indian F&amp;B industry.</p>
-          <span class="footer-gstin">GSTIN: 21AFUPN9975Q1Z5</span>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-            <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
-            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <div class="footer-contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Hanspal Square, Naharakanta, Bhubaneswar, Odisha 752101</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:kiravfood2024@gmail.com">kiravfood2024@gmail.com</a>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fas fa-phone"></i>
-            <a href="tel:+919692839491">+91 9692839491</a>
-          </div>
-        </div>
+<header class="page-hero">
+  <div class="container">
+    <span class="section-tag" style="color:var(--sand);background:rgba(243,217,177,.15);border:1px solid rgba(243,217,177,.25);display:inline-flex;margin-bottom:1rem;">Our Portfolio</span>
+    <h1>Our <em>Product</em> Range</h1>
+    <p>High-quality flavours and ingredients from the world's top flavour houses — curated for your brand.</p>
+  </div>
+</header>
+
+<section class="products-section">
+  <div class="container">
+
+    <div class="products-category">
+      <div class="category-header">
+        <h2 class="category-title">Flavour <span>Brands</span></h2>
+        <div class="category-line"></div>
+        <span class="section-tag">9 Brands</span>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Kirav Food Tech. All rights reserved.</p>
-        <p>Powered by <a href="https://jyotiranswain.github.io/powercloud/" target="_blank">PowerCloud</a></p>
+      <div class="products-mosaic">
+        <div class="product-tile"><span class="product-tile-icon">🌶️</span><h3>Oror Flavour</h3><p>Sweet &amp; spicy sensation</p><span class="product-tag">Savory</span></div>
+        <div class="product-tile"><span class="product-tile-icon">🌿</span><h3>Aarav Flavour</h3><p>Rich earthy tones</p><span class="product-tag">Natural</span></div>
+        <div class="product-tile"><span class="product-tile-icon">✨</span><h3>Keva Flavour</h3><p>Classic aromatic essence</p><span class="product-tag">Classic</span></div>
+        <div class="product-tile"><span class="product-tile-icon">🫐</span><h3>Confluence Valley</h3><p>Vibrant berry fusion</p><span class="product-tag">Fruit</span></div>
+        <div class="product-tile"><span class="product-tile-icon">🧪</span><h3>Matrix Flavour</h3><p>Complex savory boost</p><span class="product-tag">Savory</span></div>
+        <div class="product-tile"><span class="product-tile-icon">🍊</span><h3>Sensient Flavour</h3><p>Fruit-forward intensity</p><span class="product-tag">Fruit</span></div>
+        <div class="product-tile"><span class="product-tile-icon">🥛</span><h3>IFF</h3><p>Dairy &amp; sweet profiles</p><span class="product-tag">Dairy</span></div>
+        <div class="product-tile"><span class="product-tile-icon">🍬</span><h3>Bell Flavour</h3><p>Confection masters</p><span class="product-tag">Confection</span></div>
+        <div class="product-tile"><span class="product-tile-icon">🥐</span><h3>Dolher Flavour</h3><p>Bakery &amp; pastry</p><span class="product-tag">Bakery</span></div>
       </div>
     </div>
-  </footer>
 
-  <script>
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      links.classList.toggle('open');
-    });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        links.classList.remove('open');
-      });
-    });
+    <div class="products-category">
+      <div class="category-header">
+        <h2 class="category-title">Specialty <span>Ingredients</span></h2>
+        <div class="category-line"></div>
+        <span class="section-tag">3 Products</span>
+      </div>
+      <div class="specialty-grid">
+        <div class="specialty-card"><span class="icon-big">🍦</span><h3>Vanilla Powder</h3><p>Pure, premium-grade vanilla powder — perfect for dairy, bakery, and beverage applications.</p></div>
+        <div class="specialty-card"><span class="icon-big">🍮</span><h3>Caramel Liquid</h3><p>Rich, smooth caramel liquid concentrate — brings warmth and depth to any sweet formulation.</p></div>
+        <div class="specialty-card"><span class="icon-big">🧂</span><h3>Seasoning Powder</h3><p>A versatile savory blend — elevates snacks, ready meals, and processed foods.</p></div>
+      </div>
+    </div>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
+    <div style="background:linear-gradient(135deg,var(--forest),var(--dark));border-radius:var(--radius-lg);padding:clamp(2rem,5vw,3.5rem);text-align:center;color:white;margin-top:2rem;position:relative;overflow:hidden;">
+      <span class="section-tag" style="color:var(--sand);background:rgba(243,217,177,.15);border:1px solid rgba(243,217,177,.25);display:inline-flex;margin-bottom:1rem;">Bulk &amp; Custom Orders</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:.8rem;">Need a Custom Flavour <em style="color:var(--sand);">Solution?</em></h2>
+      <p style="opacity:.8;max-width:500px;margin:0 auto 2rem;">We work closely with food &amp; beverage manufacturers for tailored flavour profiles, bulk pricing, and expert support.</p>
+      <a href="contact.html" class="btn-primary" style="margin:0 auto;">Contact Our Team <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+</section>
+
+<div class="float-group">
+  <a href="tel:+919692839491" class="float-btn float-call"><i class="fas fa-phone-alt"></i></a>
+  <a href="https://wa.me/919692839491" target="_blank" class="float-btn float-wa"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-badge" style="width:fit-content;margin-bottom:1.2rem;"><img src="images/logo-dark.png" alt="Kirav" style="height:30px;"></div>
+        <p>Kirav Food Tech is a trusted food flavour manufacturing and distribution company delivering world-class taste solutions to the Indian F&amp;B industry.</p>
+        <span class="footer-gstin">GSTIN: 21AFUPN9975Q1Z5</span>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Hanspal Square, Naharakanta, Bhubaneswar, Odisha 752101</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:kiravfood2024@gmail.com">kiravfood2024@gmail.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+919692839491">+91 9692839491</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Kirav Food Tech. All rights reserved.</p>
+      <p>Powered by <a href="https://jyotiranswain.github.io/powercloud/" target="_blank">PowerCloud</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+var navBtn  = document.getElementById('navToggle');
+var navMenu = document.getElementById('navLinks');
+navBtn.addEventListener('click', function() {
+  if (navMenu.classList.contains('open')) {
+    navMenu.classList.remove('open'); navBtn.classList.remove('open'); document.body.style.overflow = '';
+  } else {
+    navMenu.classList.add('open'); navBtn.classList.add('open'); document.body.style.overflow = 'hidden';
+  }
+});
+navMenu.querySelectorAll('a').forEach(function(a) {
+  a.addEventListener('click', function() { navMenu.classList.remove('open'); navBtn.classList.remove('open'); document.body.style.overflow = ''; });
+});
+</script>
 </body>
 </html>

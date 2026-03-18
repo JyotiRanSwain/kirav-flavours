@@ -6,267 +6,217 @@
   <title>KIRAV FOOD TECH | Bringing Taste to Life</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .float-group{position:fixed!important;right:18px!important;bottom:24px!important;z-index:99999!important;display:flex!important;flex-direction:column!important;gap:10px!important;align-items:center!important;}
+    .float-btn{width:54px!important;height:54px!important;border-radius:50%!important;color:#fff!important;font-size:1.4rem!important;display:flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;box-shadow:0 4px 20px rgba(0,0,0,.35)!important;}
+    .float-wa{background:#25D366!important;}
+    .float-call{background:#3A6B5C!important;}
+  </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">
-        <div class="logo-badge">
-          <img src="images/logo-dark.png" alt="Kirav">
-        </div>
-        <div class="logo-text">
-          KIRAV FOOD TECH
-          <small>Flavour Manufacturing</small>
-        </div>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-badge"><img src="images/logo-dark.png" alt="Kirav"></div>
+      <div class="logo-text">KIRAV FOOD TECH<small>Flavour Manufacturing</small></div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <!-- HERO SLIDER -->
-  <section class="hero-slider" id="heroSlider">
-    <div class="slide active" style="background-image: url('images/slide1.jpg')">
-      <div class="slide-overlay"></div>
-      <div class="container">
-        <div class="slide-content">
-          <span class="slide-eyebrow"><i class="fas fa-star"></i> Premium Flavour Solutions</span>
-          <h1>Bringing <em>Taste</em><br>to Life</h1>
-          <p>Food Flavour Manufacturing &amp; Distribution — Trusted by leading F&amp;B brands across India.</p>
-          <a href="products.html" class="btn-primary">Explore Flavours <i class="fas fa-arrow-right"></i></a>
+<section class="hero-slider" id="heroSlider">
+  <div class="slide active" style="background-image:url('images/slide1.jpg')">
+    <div class="slide-overlay"></div>
+    <div class="container"><div class="slide-content">
+      <span class="slide-eyebrow"><i class="fas fa-star"></i> Premium Flavour Solutions</span>
+      <h1>Bringing <em>Taste</em><br>to Life</h1>
+      <p>Food Flavour Manufacturing &amp; Distribution — Trusted by leading F&amp;B brands across India.</p>
+      <a href="products.html" class="btn-primary">Explore Flavours <i class="fas fa-arrow-right"></i></a>
+    </div></div>
+  </div>
+  <div class="slide" style="background-image:url('images/slide2.jpg')">
+    <div class="slide-overlay"></div>
+    <div class="container"><div class="slide-content">
+      <span class="slide-eyebrow"><i class="fas fa-leaf"></i> Natural &amp; Pure</span>
+      <h1>Natural <em>Flavours,</em><br>Authentic Taste</h1>
+      <p>Pure, authentic essences crafted for your creations — dairy, bakery, confection &amp; more.</p>
+      <a href="products.html" class="btn-primary">Discover More <i class="fas fa-arrow-right"></i></a>
+    </div></div>
+  </div>
+  <div class="slide" style="background-image:url('images/slide3.jpg')">
+    <div class="slide-overlay"></div>
+    <div class="container"><div class="slide-content">
+      <span class="slide-eyebrow"><i class="fas fa-flask"></i> Innovation First</span>
+      <h1>Innovation in <em>Every<br>Drop</em></h1>
+      <p>Cutting-edge flavour technology sourced from the world's top flavour houses.</p>
+      <a href="products.html" class="btn-primary">Learn More <i class="fas fa-arrow-right"></i></a>
+    </div></div>
+  </div>
+  <div class="slide" style="background-image:url('images/slide4.jpg')">
+    <div class="slide-overlay"></div>
+    <div class="container"><div class="slide-content">
+      <span class="slide-eyebrow"><i class="fas fa-globe"></i> Global Standards</span>
+      <h1>Global <em>Standards,</em><br>Local Service</h1>
+      <p>Premium quality flavours from world-class brands, delivered with personal care.</p>
+      <a href="products.html" class="btn-primary">View Products <i class="fas fa-arrow-right"></i></a>
+    </div></div>
+  </div>
+  <div class="slider-arrows">
+    <button class="slider-arrow" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+    <button class="slider-arrow" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+  </div>
+  <div class="slider-nav">
+    <button class="slider-dot active" data-slide="0"></button>
+    <button class="slider-dot" data-slide="1"></button>
+    <button class="slider-dot" data-slide="2"></button>
+    <button class="slider-dot" data-slide="3"></button>
+  </div>
+</section>
+
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-strip-inner">
+      <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Brand Partners</div></div>
+      <div class="stat-item"><div class="stat-number">100+</div><div class="stat-label">Flavour Variants</div></div>
+      <div class="stat-item"><div class="stat-number">PAN India</div><div class="stat-label">Distribution</div></div>
+      <div class="stat-item"><div class="stat-number">2024</div><div class="stat-label">Established</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <img class="about-img-main" src="images/about-image.jpg" alt="About Kirav Food Tech">
+        <div class="about-accent-card">
+          <div class="big-num">10+</div>
+          <p>Premium Flavour Brands</p>
         </div>
       </div>
-    </div>
-    <div class="slide" style="background-image: url('images/slide2.jpg')">
-      <div class="slide-overlay"></div>
-      <div class="container">
-        <div class="slide-content">
-          <span class="slide-eyebrow"><i class="fas fa-leaf"></i> Natural &amp; Pure</span>
-          <h1>Natural <em>Flavours,</em><br>Authentic Taste</h1>
-          <p>Pure, authentic essences crafted for your creations — dairy, bakery, confection &amp; more.</p>
-          <a href="products.html" class="btn-primary">Discover More <i class="fas fa-arrow-right"></i></a>
+      <div class="about-text">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-heading">About <span>Kirav</span><br>Food Tech</h2>
+        <p>Kirav Food Tech is a trusted name in food flavour manufacturing and distribution. We provide premium flavours and ingredients to help food and beverage brands deliver outstanding taste and aroma.</p>
+        <p>Based in Bhubaneswar, Odisha, we partner with India's and the world's leading flavour houses — including IFF, Sensient, Bell, Döhler and more.</p>
+        <div class="vision-box">
+          <h4>Our Vision</h4>
+          <p>To be a leading flavour partner for the food industry by offering creative, safe, and high-quality taste solutions that inspire every bite.</p>
         </div>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('images/slide3.jpg')">
-      <div class="slide-overlay"></div>
-      <div class="container">
-        <div class="slide-content">
-          <span class="slide-eyebrow"><i class="fas fa-flask"></i> Innovation First</span>
-          <h1>Innovation in <em>Every<br>Drop</em></h1>
-          <p>Cutting-edge flavour technology sourced from the world's top flavour houses.</p>
-          <a href="products.html" class="btn-primary">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('images/slide4.jpg')">
-      <div class="slide-overlay"></div>
-      <div class="container">
-        <div class="slide-content">
-          <span class="slide-eyebrow"><i class="fas fa-globe"></i> Global Standards</span>
-          <h1>Global <em>Standards,</em><br>Local Service</h1>
-          <p>Premium quality flavours from world-class brands, delivered with personal care.</p>
-          <a href="products.html" class="btn-primary">View Products <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Arrows -->
-    <div class="slider-arrows">
-      <button class="slider-arrow" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
-      <button class="slider-arrow" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
-    </div>
-
-    <!-- Dots -->
-    <div class="slider-nav">
-      <button class="slider-dot active" data-slide="0"></button>
-      <button class="slider-dot" data-slide="1"></button>
-      <button class="slider-dot" data-slide="2"></button>
-      <button class="slider-dot" data-slide="3"></button>
-    </div>
-  </section>
-
-  <!-- STATS STRIP -->
-  <div class="stats-strip">
-    <div class="container">
-      <div class="stats-strip-inner">
-        <div class="stat-item">
-          <div class="stat-number">10+</div>
-          <div class="stat-label">Brand Partners</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">100+</div>
-          <div class="stat-label">Flavour Variants</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">PAN India</div>
-          <div class="stat-label">Distribution</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">2024</div>
-          <div class="stat-label">Established</div>
-        </div>
+        <br>
+        <a href="products.html" class="btn-secondary">See Our Products <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ABOUT SECTION -->
-  <section class="about-section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image-wrap">
-          <img class="about-img-main" src="images/about-image.jpg" alt="About Kirav Food Tech">
-          <div class="about-accent-card">
-            <div class="big-num">10+</div>
-            <p>Premium Flavour Brands</p>
-          </div>
-        </div>
-        <div class="about-text">
-          <span class="section-tag">Who We Are</span>
-          <h2 class="section-heading">About <span>Kirav</span><br>Food Tech</h2>
-          <p>Kirav Food Tech is a trusted name in food flavour manufacturing and distribution. We provide premium flavours and ingredients to help food and beverage brands deliver outstanding taste and aroma.</p>
-          <p>Based in Bhubaneswar, Odisha, we partner with India's and the world's leading flavour houses — including IFF, Sensient, Bell, Döhler and more — to bring you a complete portfolio of taste solutions.</p>
-          <div class="vision-box">
-            <h4>Our Vision</h4>
-            <p>To be a leading flavour partner for the food industry by offering creative, safe, and high-quality taste solutions that inspire every bite.</p>
-          </div>
-          <br>
-          <a href="products.html" class="btn-secondary">See Our Products <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
+<section class="values-section">
+  <div class="container">
+    <div style="text-align:center;">
+      <span class="section-tag" style="display:inline-flex;margin-bottom:1rem;">Our Promise</span>
+      <h2 class="section-heading" style="text-align:center;margin-bottom:.5rem;">Core <span>Values</span></h2>
+      <p class="section-sub" style="text-align:center;margin:0 auto 2.5rem;">What sets us apart in every partnership.</p>
     </div>
-  </section>
-
-  <!-- VALUES SECTION -->
-  <section class="values-section">
-    <div class="container">
-      <div style="text-align:center; margin-bottom: 0.5rem;">
-        <span class="section-tag" style="margin: 0 auto 1rem; display: inline-flex;">Our Promise</span>
-      </div>
-      <h2 class="section-heading" style="text-align:center; margin-bottom:0.5rem;">Core <span>Values</span></h2>
-      <p class="section-sub" style="text-align:center; margin: 0 auto 0;">What sets us apart in every partnership.</p>
-      <div class="values-grid">
-        <div class="value-card fade-up fade-up-1">
-          <div class="value-icon"><i class="fas fa-award"></i></div>
-          <h4>Quality Assurance</h4>
-          <p>Every product we supply meets strict quality standards — no compromises.</p>
-        </div>
-        <div class="value-card fade-up fade-up-2">
-          <div class="value-icon"><i class="fas fa-flask"></i></div>
-          <h4>Flavour Innovation</h4>
-          <p>We bring the newest taste technologies from leading global flavour houses.</p>
-        </div>
-        <div class="value-card fade-up fade-up-3">
-          <div class="value-icon"><i class="fas fa-handshake"></i></div>
-          <h4>Customer Focus</h4>
-          <p>Dedicated support and personalised flavour recommendations for your needs.</p>
-        </div>
-        <div class="value-card fade-up fade-up-4">
-          <div class="value-icon"><i class="fas fa-shipping-fast"></i></div>
-          <h4>Reliable Supply</h4>
-          <p>Consistent availability and fast delivery, so your production never stops.</p>
-        </div>
-      </div>
+    <div class="values-grid">
+      <div class="value-card"><div class="value-icon"><i class="fas fa-award"></i></div><h4>Quality Assurance</h4><p>Every product we supply meets strict quality standards — no compromises.</p></div>
+      <div class="value-card"><div class="value-icon"><i class="fas fa-flask"></i></div><h4>Flavour Innovation</h4><p>We bring the newest taste technologies from leading global flavour houses.</p></div>
+      <div class="value-card"><div class="value-icon"><i class="fas fa-handshake"></i></div><h4>Customer Focus</h4><p>Dedicated support and personalised flavour recommendations for your needs.</p></div>
+      <div class="value-card"><div class="value-icon"><i class="fas fa-shipping-fast"></i></div><h4>Reliable Supply</h4><p>Consistent availability and fast delivery, so your production never stops.</p></div>
     </div>
-  </section>
-
-  <!-- FLOATING BUTTONS -->
-  <div class="float-group">
-    <a href="tel:+919692839491" class="float-btn float-call" data-tip="Call Us"><i class="fas fa-phone-alt"></i></a>
-    <a href="https://wa.me/919692839491" target="_blank" class="float-btn float-wa" data-tip="WhatsApp"><i class="fab fa-whatsapp"></i></a>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="logo-badge" style="width: fit-content; margin-bottom: 1.2rem;">
-            <img src="images/logo-dark.png" alt="Kirav" style="height:30px;">
-          </div>
-          <p>Kirav Food Tech is a trusted food flavour manufacturing and distribution company. We deliver world-class taste solutions to the Indian F&amp;B industry.</p>
-          <span class="footer-gstin">GSTIN: 21AFUPN9975Q1Z5</span>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-            <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
-            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <div class="footer-contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Hanspal Square, Naharakanta, Bhubaneswar, Odisha 752101</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:kiravfood2024@gmail.com">kiravfood2024@gmail.com</a>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fas fa-phone"></i>
-            <a href="tel:+919692839491">+91 9692839491</a>
-          </div>
-        </div>
+<div class="float-group">
+  <a href="tel:+919692839491" class="float-btn float-call"><i class="fas fa-phone-alt"></i></a>
+  <a href="https://wa.me/919692839491" target="_blank" class="float-btn float-wa"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-badge" style="width:fit-content;margin-bottom:1.2rem;"><img src="images/logo-dark.png" alt="Kirav" style="height:30px;"></div>
+        <p>Kirav Food Tech is a trusted food flavour manufacturing and distribution company delivering world-class taste solutions to the Indian F&amp;B industry.</p>
+        <span class="footer-gstin">GSTIN: 21AFUPN9975Q1Z5</span>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Kirav Food Tech. All rights reserved.</p>
-        <p>Powered by <a href="https://jyotiranswain.github.io/powercloud/" target="_blank">PowerCloud</a></p>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Hanspal Square, Naharakanta, Bhubaneswar, Odisha 752101</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:kiravfood2024@gmail.com">kiravfood2024@gmail.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+919692839491">+91 9692839491</a></div>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Kirav Food Tech. All rights reserved.</p>
+      <p>Powered by <a href="https://jyotiranswain.github.io/powercloud/" target="_blank">PowerCloud</a></p>
+    </div>
+  </div>
+</footer>
 
-  <script>
-    // NAV TOGGLE
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      links.classList.toggle('open');
-    });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        links.classList.remove('open');
-      });
-    });
+<script>
+/* ── NAV MENU ── */
+var navBtn  = document.getElementById('navToggle');
+var navMenu = document.getElementById('navLinks');
 
-    // HERO SLIDER
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.slider-dot');
+navBtn.addEventListener('click', function() {
+  if (navMenu.classList.contains('open')) {
+    navMenu.classList.remove('open');
+    navBtn.classList.remove('open');
+    document.body.style.overflow = '';
+  } else {
+    navMenu.classList.add('open');
+    navBtn.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+});
 
-    function goTo(n) {
-      slides[currentSlide].classList.remove('active');
-      dots[currentSlide].classList.remove('active');
-      currentSlide = (n + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
-    }
+navMenu.querySelectorAll('a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    navMenu.classList.remove('open');
+    navBtn.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
 
-    document.getElementById('nextSlide').addEventListener('click', () => goTo(currentSlide + 1));
-    document.getElementById('prevSlide').addEventListener('click', () => goTo(currentSlide - 1));
-    dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.slide)));
+/* ── HERO SLIDER ── */
+var slides   = document.querySelectorAll('.slide');
+var dots     = document.querySelectorAll('.slider-dot');
+var cur      = 0;
+var timer    = null;
 
-    const autoplay = setInterval(() => goTo(currentSlide + 1), 5000);
-    document.getElementById('heroSlider').addEventListener('mouseenter', () => clearInterval(autoplay));
+function goTo(n) {
+  slides[cur].classList.remove('active');
+  dots[cur].classList.remove('active');
+  cur = (n + slides.length) % slides.length;
+  slides[cur].classList.add('active');
+  dots[cur].classList.add('active');
+}
 
-    // SCROLL ANIMATIONS
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
+function startAuto() { timer = setInterval(function(){ goTo(cur + 1); }, 5000); }
+function stopAuto()  { clearInterval(timer); }
+
+document.getElementById('nextSlide').addEventListener('click', function(){ stopAuto(); goTo(cur+1); startAuto(); });
+document.getElementById('prevSlide').addEventListener('click', function(){ stopAuto(); goTo(cur-1); startAuto(); });
+dots.forEach(function(d){ d.addEventListener('click', function(){ stopAuto(); goTo(+this.dataset.slide); startAuto(); }); });
+
+startAuto();
+</script>
 </body>
 </html>
