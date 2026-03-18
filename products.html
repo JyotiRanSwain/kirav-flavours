@@ -1,394 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Kirav Food Tech</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #2C3A3A;
-            line-height: 1.5;
-            background-color: #FCF9F5;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        /* Navigation - same as index */
-        .navbar {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(193,123,78,0.1);
-        }
-        
-        .nav-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 2rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: #C17B4E;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo-img-container {
-            background: #2C3A3A;
-            padding: 8px 15px;
-            border-radius: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .logo-img {
-            height: 35px;
-            width: auto;
-            filter: brightness(0) invert(1);
-        }
-        
-        .logo span {
-            font-weight: 400;
-            font-size: 1rem;
-            color: #4A7A6C;
-            background: rgba(74,122,108,0.1);
-            padding: 4px 12px;
-            border-radius: 40px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
-        .nav-links a {
-            text-decoration: none;
-            font-weight: 500;
-            color: #2C3A3A;
-            font-size: 1.05rem;
-            transition: 0.2s;
-            position: relative;
-            padding: 5px 0;
-        }
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #C17B4E;
-        }
-        .nav-links a.active:after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #C17B4E;
-        }
-
-        /* Page Header */
-        .page-header {
-            background: linear-gradient(135deg, #4A7A6C, #2C3A3A);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .page-header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-        .page-header p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-        }
-
-        /* Products Layout with Image Sidebars */
-        .products-section {
-            padding: 5rem 0;
-        }
-
-        .product-row {
-            display: grid;
-            grid-template-columns: 200px 1fr 200px;
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        /* Image Sidebars - images from images/product-left.jpg, product-right.jpg, etc */
-        .sidebar-image {
-            height: 400px;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        .sidebar-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-        .sidebar-image:hover img {
-            transform: scale(1.1);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .product-card {
-            background: white;
-            padding: 2rem 1rem;
-            border-radius: 25px;
-            text-align: center;
-            border: 1px solid rgba(193,123,78,0.1);
-            transition: 0.3s;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            border-color: #C17B4E;
-            box-shadow: 0 15px 30px rgba(193,123,78,0.1);
-        }
-        .product-card h3 {
-            color: #C17B4E;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .product-card p {
-            color: #4A7A6C;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            color: #4A7A6C;
-            margin: 3rem 0 2rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-        .section-title:after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #C17B4E, #F3D9B1);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-
-        /* Specialty Ingredients Row */
-        .specialty-row {
-            display: grid;
-            grid-template-columns: 200px 1fr 200px;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-/* Footer */
-footer {
-    background: #2C3A3A;
-    color: #FCF9F5;
-    padding-top: 4rem;
-    margin-top: 3rem;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    padding-bottom: 3rem;
-}
-
-.footer-col h3 {
-    color: #F3D9B1;
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(243, 217, 177, 0.2);
-    padding: 1.5rem 0;
-    text-align: center;
-    color: rgba(243, 217, 177, 0.7);
-}
-
-/* PowerCloud link styling - FIXED */
-.footer-bottom a {
-    color: #F3D9B1;  /* Vanilla cream color */
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-    border-bottom: 1px dotted rgba(243, 217, 177, 0.3);
-}
-
-.footer-bottom a:hover {
-    color: #C17B4E;  /* Terracotta on hover */
-    border-bottom-color: #C17B4E;
-}
-
-.powered-by {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-}
-
-        /* Floating Buttons */
-        .float-btn {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            border-radius: 50%;
-            color: white;
-            text-align: center;
-            font-size: 28px;
-            line-height: 60px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            z-index: 100;
-            transition: 0.2s;
-        }
-        .whatsapp {
-            background: #25D366;
-            right: 30px;
-        }
-        .phone {
-            background: #4A7A6C;
-            right: 110px;
-        }
-        .float-btn:hover {
-            transform: scale(1.1);
-        }
-
-        @media (max-width: 1000px) {
-            .product-row, .specialty-row {
-                grid-template-columns: 1fr;
-            }
-            .sidebar-image {
-                height: 300px;
-            }
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Kirav Food Tech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-flex">
-            <a href="index.html" class="logo">
-                <div class="logo-img-container">
-                    <img src="images/logo-dark.png" alt="Kirav" class="logo-img">
-                </div>
-                <span>KIRAV FOOD TECH</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html" class="active">Products</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-badge">
+          <img src="images/logo-dark.png" alt="Kirav">
         </div>
-    </nav>
-
-    <header class="page-header">
-        <div class="container">
-            <h1>Our Product Range</h1>
-            <p>High-quality flavours and ingredients from top brands</p>
+        <div class="logo-text">
+          KIRAV FOOD TECH
+          <small>Flavour Manufacturing</small>
         </div>
-    </header>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <section class="products-section">
-        <div class="container">
-            <!-- Main Products Row with Images -->
-            <div class="product-row">
-                <!-- Left Sidebar Image - images/product-left.jpg -->
-                <div class="sidebar-image">
-                    <img src="images/product-left.jpg" alt="Flavours">
-                </div>
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="container">
+      <span class="section-tag" style="color:var(--sand); background: rgba(243,217,177,0.15); border: 1px solid rgba(243,217,177,0.25); margin: 0 auto 1rem; display: inline-flex;">
+        Our Portfolio
+      </span>
+      <h1>Our <em>Product</em> Range</h1>
+      <p>High-quality flavours and ingredients from the world's top flavour houses — curated for your brand.</p>
+    </div>
+  </header>
 
-                <!-- Products Grid -->
-                <div class="products-grid">
-                    <div class="product-card"><h3>Oror Flavour</h3><p>Sweet & spicy</p></div>
-                    <div class="product-card"><h3>Aarav Flavour</h3><p>Earthy tone</p></div>
-                    <div class="product-card"><h3>Keva Flavour</h3><p>Classic essence</p></div>
-                    <div class="product-card"><h3>Confluence Valley</h3><p>Berry fusion</p></div>
-                    <div class="product-card"><h3>Matrix Flavour</h3><p>Savory boost</p></div>
-                    <div class="product-card"><h3>Sensient Flavour</h3><p>Fruit intense</p></div>
-                    <div class="product-card"><h3>IFF</h3><p>Dairy & sweet</p></div>
-                    <div class="product-card"><h3>Bell Flavour</h3><p>Confection</p></div>
-                    <div class="product-card"><h3>Dolher Flavour</h3><p>Bakery</p></div>
-                </div>
+  <!-- PRODUCTS SECTION -->
+  <section class="products-section">
+    <div class="container">
 
-                <!-- Right Sidebar Image - images/product-right.jpg -->
-                <div class="sidebar-image">
-                    <img src="images/product-right.jpg" alt="Ingredients">
-                </div>
-            </div>
-
-            <h2 class="section-title">Specialty Ingredients</h2>
-
-            <!-- Specialty Row with Images -->
-            <div class="specialty-row">
-                <!-- Left Sidebar Image - images/specialty-left.jpg -->
-                <div class="sidebar-image">
-                    <img src="images/specialty-left.jpg" alt="Specialty">
-                </div>
-
-                <!-- Specialty Grid -->
-                <div class="products-grid">
-                    <div class="product-card"><h3>Vanilla Powder</h3><p>Pure vanilla</p></div>
-                    <div class="product-card"><h3>Caramel Liquid</h3><p>Rich caramel</p></div>
-                    <div class="product-card"><h3>Seasoning Powder</h3><p>Savory blend</p></div>
-                </div>
-
-                <!-- Right Sidebar Image - images/specialty-right.jpg -->
-                <div class="sidebar-image">
-                    <img src="images/specialty-right.jpg" alt="Ingredients">
-                </div>
-            </div>
+      <!-- Flavour Brands -->
+      <div class="products-category">
+        <div class="category-header">
+          <h2 class="category-title">Flavour <span>Brands</span></h2>
+          <div class="category-line"></div>
+          <span class="section-tag">9 Brands</span>
         </div>
-    </section>
 
-<a href="https://wa.me/919692839491" target="_blank" class="float-btn whatsapp">
-    <i class="fab fa-whatsapp"></i>
-</a>
-<a href="tel:+919692839491" target="_blank" class="float-btn phone">
-    <i class="fas fa-phone-alt"></i>
-</a>
+        <div class="products-mosaic">
+          <div class="product-tile fade-up fade-up-1">
+            <span class="product-tile-icon">🌶️</span>
+            <h3>Oror Flavour</h3>
+            <p>Sweet &amp; spicy sensation</p>
+            <span class="product-tag">Savory</span>
+          </div>
+          <div class="product-tile fade-up fade-up-2">
+            <span class="product-tile-icon">🌿</span>
+            <h3>Aarav Flavour</h3>
+            <p>Rich earthy tones</p>
+            <span class="product-tag">Natural</span>
+          </div>
+          <div class="product-tile fade-up fade-up-3">
+            <span class="product-tile-icon">✨</span>
+            <h3>Keva Flavour</h3>
+            <p>Classic aromatic essence</p>
+            <span class="product-tag">Classic</span>
+          </div>
+          <div class="product-tile fade-up fade-up-1">
+            <span class="product-tile-icon">🫐</span>
+            <h3>Confluence Valley</h3>
+            <p>Vibrant berry fusion</p>
+            <span class="product-tag">Fruit</span>
+          </div>
+          <div class="product-tile fade-up fade-up-2">
+            <span class="product-tile-icon">🧪</span>
+            <h3>Matrix Flavour</h3>
+            <p>Complex savory boost</p>
+            <span class="product-tag">Savory</span>
+          </div>
+          <div class="product-tile fade-up fade-up-3">
+            <span class="product-tile-icon">🍊</span>
+            <h3>Sensient Flavour</h3>
+            <p>Fruit-forward intensity</p>
+            <span class="product-tag">Fruit</span>
+          </div>
+          <div class="product-tile fade-up fade-up-1">
+            <span class="product-tile-icon">🥛</span>
+            <h3>IFF</h3>
+            <p>Dairy &amp; sweet profiles</p>
+            <span class="product-tag">Dairy</span>
+          </div>
+          <div class="product-tile fade-up fade-up-2">
+            <span class="product-tile-icon">🍬</span>
+            <h3>Bell Flavour</h3>
+            <p>Confection masters</p>
+            <span class="product-tag">Confection</span>
+          </div>
+          <div class="product-tile fade-up fade-up-3">
+            <span class="product-tile-icon">🥐</span>
+            <h3>Dolher Flavour</h3>
+            <p>Bakery &amp; pastry</p>
+            <span class="product-tag">Bakery</span>
+          </div>
+        </div>
+      </div>
 
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h3>KIRAV FOOD TECH</h3>
-                <p>GSTIN: 21AFUPN9975Q1Z5</p>
-                <p>Bhubaneswar, Odisha</p>
-            </div>
-            <div class="footer-col">
-                <h3>Contact</h3>
-                <p>Email: kiravfood2024@gmail.com</p>
-                <p>Mobile: +91 9692839491</p>
-            </div>
+      <!-- Specialty Ingredients -->
+      <div class="products-category">
+        <div class="category-header">
+          <h2 class="category-title">Specialty <span>Ingredients</span></h2>
+          <div class="category-line"></div>
+          <span class="section-tag">3 Products</span>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Kirav Food Tech. All rights reserved.</p>
-            <p class="powered-by">Powered by <a href="https://sites.google.com/view/powercloud/" target="_blank">PowerCloud</a></p>
+
+        <div class="specialty-grid">
+          <div class="specialty-card fade-up fade-up-1">
+            <span class="icon-big">🍦</span>
+            <h3>Vanilla Powder</h3>
+            <p>Pure, premium-grade vanilla powder — perfect for dairy, bakery, and beverage applications.</p>
+          </div>
+          <div class="specialty-card fade-up fade-up-2">
+            <span class="icon-big">🍮</span>
+            <h3>Caramel Liquid</h3>
+            <p>Rich, smooth caramel liquid concentrate — brings warmth and depth to any sweet formulation.</p>
+          </div>
+          <div class="specialty-card fade-up fade-up-3">
+            <span class="icon-big">🧂</span>
+            <h3>Seasoning Powder</h3>
+            <p>A versatile savory blend — elevates snacks, ready meals, and processed foods.</p>
+          </div>
         </div>
-    </footer>
+      </div>
+
+      <!-- CTA Banner -->
+      <div style="background: linear-gradient(135deg, var(--forest), var(--dark)); border-radius: var(--radius-lg); padding: clamp(2rem, 5vw, 3.5rem); text-align: center; color: white; margin-top: 2rem; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -60px; right: -60px; width: 240px; height: 240px; background: radial-gradient(circle, rgba(212,113,74,0.2) 0%, transparent 70%); border-radius: 50%;"></div>
+        <span class="section-tag" style="color: var(--sand); background: rgba(243,217,177,0.15); border: 1px solid rgba(243,217,177,0.25); margin: 0 auto 1rem; display: inline-flex;">Bulk & Custom Orders</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 0.8rem;">Need a Custom Flavour <em style="color: var(--sand);">Solution?</em></h2>
+        <p style="opacity: 0.8; max-width: 500px; margin: 0 auto 2rem;">We work closely with food &amp; beverage manufacturers for tailored flavour profiles, bulk pricing, and expert support.</p>
+        <a href="contact.html" class="btn-primary" style="margin: 0 auto;">Contact Our Team <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="float-group">
+    <a href="tel:+919692839491" class="float-btn float-call" data-tip="Call Us"><i class="fas fa-phone-alt"></i></a>
+    <a href="https://wa.me/919692839491" target="_blank" class="float-btn float-wa" data-tip="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-badge" style="width: fit-content; margin-bottom: 1.2rem;">
+            <img src="images/logo-dark.png" alt="Kirav" style="height:30px;">
+          </div>
+          <p>Kirav Food Tech is a trusted food flavour manufacturing and distribution company. We deliver world-class taste solutions to the Indian F&amp;B industry.</p>
+          <span class="footer-gstin">GSTIN: 21AFUPN9975Q1Z5</span>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Hanspal Square, Naharakanta, Bhubaneswar, Odisha 752101</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:kiravfood2024@gmail.com">kiravfood2024@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+919692839491">+91 9692839491</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kirav Food Tech. All rights reserved.</p>
+        <p>Powered by <a href="https://jyotiranswain.github.io/powercloud/" target="_blank">PowerCloud</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      links.classList.toggle('open');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        links.classList.remove('open');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
